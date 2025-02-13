@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Taules</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenidor de Login -->
+    <div id="login-container">
+        <h2>Iniciar Sessió</h2>
+        <input type="text" id="usuari" placeholder="Usuari">
+        <button id="login-button" onclick="login()">Entrar</button>
+        <p id="error-missatge"></p>
+    </div>
+
+    <!-- Contenidor de l'Aplicació -->
+    <div id="app-container" style="display:none;">
+        <!-- Contenidor del calendari -->
+        <div id="calendar-container">
+            <h3>Selecciona una data</h3>
+            <div id="custom-calendar"></div>
+        </div>
+
+        <!-- Contenidor del plànol de taules -->
+        <div id="plano">
+            <h3>Selecciona una taula</h3>
+            
+            <!-- Primera fila -->
+            <div class="fila">
+                <div class="bloc-esquerra">
+                    <div class="gran-quadrat-alt">
+                        <div class="quadrat" data-taula="10">Quebac</div>
+                        <div class="quadrat" data-taula="12">Berlín</div>
+                        <div class="quadrat quadrat-doble" data-taula="13">Atenes</div>
+                        <div class="quadrat" data-taula="9">El Caire</div>
+                        <div class="quadrat" data-taula="11">Amsterdam</div>
+                    </div>
+                </div>
+                <div class="bloc-dreta">
+                    <div class="gran-quadrat-alt">
+                        <div class="quadrat quadrat-doble" data-taula="19">Madrid</div>
+                        <div class="quadrat" data-taula="21">Roma</div>
+                        <div class="quadrat" data-taula="23">Rio de Janeiro</div>
+                        <div class="quadrat" data-taula="20">Copenhaguen</div>
+                        <div class="quadrat" data-taula="22">Dubai</div>
+                    </div>
+                </div>           
+            </div>
+
+            <!-- Segona fila -->
+            <div class="fila fila-segona">
+                <div class="bloc-esquerra">
+                    <div class="gran-quadrat">
+                        <div class="quadrat" data-taula="6">Florència</div>
+                        <div class="quadrat" data-taula="8">Lisboa</div> 
+                        <div class="quadrat" data-taula="5">Nova York</div>
+                        <div class="quadrat" data-taula="7">Buenos Aires</div>
+                    </div>
+                </div>
+                <div class="bloc-dreta">
+                    <div class="gran-quadrat-alt">
+                        <div class="quadrat quadrat-doble" data-taula="14">L'Havana</div>
+                        <div class="quadrat" data-taula="16">Kàtmandu</div>
+                        <div class="quadrat" data-taula="18">Tòquio</div>
+                        <div class="quadrat" data-taula="15">San Francisco</div>
+                        <div class="quadrat" data-taula="17">Praga</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fila fila-segona">
+                <div class="bloc-esquerra">
+                    <div class="gran-quadrat">
+                        <div class="quadrat" data-taula="2">París</div>
+                        <div class="quadrat" data-taula="4">Londres</div>
+                        <div class="quadrat" data-taula="1">Vidreres</div>
+                        <div class="quadrat" data-taula="3">Chicago</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botó de sortir -->
+            <button id="logout-button" onclick="logout()">Sortir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
